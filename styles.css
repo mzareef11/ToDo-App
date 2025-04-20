@@ -1,0 +1,236 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #FFFFFF;
+    --border-color: #6e6d6d;
+    --background-color: #292930;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0.8rem 0.8rem 0.8rem;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+}
+
+.heading > h1 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+.input-content {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-input {
+    width: 70%;
+    border: none;
+    font-size: 18px;
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+}
+
+.todo-input::placeholder {
+    font-size: 16px;
+    color: rgb(43, 43, 99);
+}
+
+.todo-input:focus {
+    outline: 2px solid rgb(56, 56, 78);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px 2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.add-button {
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 0.7rem 2.8rem 0.7rem 2.8rem;
+    color: var(--text-color);
+    border-radius: 10px;
+    background-color: rgb(43, 43, 99);
+    &:hover {
+        background-color: rgb(32, 32, 76);
+    }
+}
+
+@media screen and (min-width:382px) {
+    .heading > h1 {
+        font-size: 2.3rem;
+    }
+    .todo-input {
+        padding: 0.7rem 0.8rem;
+    }
+    .add-button {
+        padding: 0.95rem 5rem 0.95rem 5rem;
+    }
+}
+
+@media screen and (min-width:435px) {
+    .input-content  {
+        flex-direction: row;
+        gap: 0;
+    }
+    .todo-input {
+        width: 70%;
+        border-radius: 9px 0px 0px 9px;
+    }
+    .add-button {
+        border-radius: 0px 9px 9px 0px;
+        padding: 0.8rem 1.7rem 0.85rem 1.7rem;
+    }
+}
+
+.body {
+    padding-top: 2rem;
+}
+
+.todo-list {
+    padding: 0.65rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+}
+
+.todo-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.65rem;
+    gap: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.todo-item-value {
+    width: 50%;
+}
+
+.todo-item-value > p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.todo-item button {
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.4rem 0.9rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.done-button {
+    display: none;
+    color: var(--text-color);
+    background-color: rgb(96, 150, 194);
+    &:hover {
+        background-color: rgb(78, 123, 161);
+    }
+}
+
+.edit-button {
+    color: var(--text-color);
+    background-color: rgb(96, 150, 194);
+    &:hover {
+        background-color: rgb(78, 123, 161);
+    }
+}
+
+.delete-button {
+    color: var(--text-color);
+    background-color: rgb(154, 39, 31);
+    &:hover {
+        background-color: rgb(121, 30, 23);
+    }
+}
+
+.todo-item-value input {
+    display: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 0.2rem 0.5rem;
+    color: var(--text-color);
+    background-color: transparent;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    &:focus {
+        outline: none;
+    }
+}
+
+@media screen and (min-width:382px) {
+    .todo-list {
+        padding: 1rem;
+    }
+    .todo-item {
+        padding: 0.6rem 1.2rem;
+    }
+    .todo-item button {
+        padding: 0.5rem 1rem;
+    }
+    .todo-item-value > p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width:435px) {
+    .edit-input {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:535px) {
+    .edit-input {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:635px) {
+    .edit-input {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width:735px) {
+    .edit-input {
+        width: 65%;
+    }
+}
