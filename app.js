@@ -53,7 +53,11 @@ function addTodo() {
 
 function deleteTodo(index) {
     items.splice(index, 1);
-    renderItems();
+    if (items.length === 0) {
+        displayMessage();
+    } else {
+        renderItems();
+    }
     saveData();
 }
 
@@ -77,7 +81,15 @@ function saveData() {
 function getData() {
     let data = localStorage.getItem("items");
     items = JSON.parse(data) || [];
-    renderItems();
+    if (items.length === 0) {
+        displayMessage();
+    } else {
+        renderItems();
+    }
 }
 
 getData();
+
+function displayMessage() {
+    list.innerHTML = `<p class="emptyMsg">Your To-Do list is empty. Add some tasks!</p>`;
+}

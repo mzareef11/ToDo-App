@@ -196,6 +196,11 @@ body {
     }
 }
 
+.emptyMsg {
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
 @media screen and (min-width:382px) {
     .todo-list {
         padding: 1rem;
@@ -208,7 +213,10 @@ body {
     }
     .todo-item-value > p {
         font-size: 1.2rem;
+    }.emptyMsg {
+        font-size: 0.95rem;
     }
+
 }
 
 @media screen and (min-width:435px) {
